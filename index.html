@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Step Form - Digantara</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="progress">Step <span id="step-num">1</span> of 3</div>
+
+    <!-- Step 1: Basic Details -->
+    <div class="form-step" id="step1">
+      <h2>Basic Details</h2>
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" required>
+        <span class="error" id="name-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" required>
+        <span class="error" id="dob-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender *</label>
+        <select id="gender" required>
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <span class="error" id="gender-error"></span>
+      </div>
+    </div>
+
+    <!-- Step 2: Contact Info -->
+    <div class="form-step" id="step2" style="display: none;">
+      <h2>Contact Information</h2>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" required>
+        <span class="error" id="email-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" required>
+        <span class="error" id="phone-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="address">Address *</label>
+        <textarea id="address" required></textarea>
+        <span class="error" id="address-error"></span>
+      </div>
+    </div>
+
+    <!-- Step 3: Summary -->
+    <div class="form-step" id="step3" style="display: none;">
+      <h2>Summary</h2>
+      <div id="summary"></div>
+      <button id="submit">Submit</button>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <button id="back" style="display: none;">Back</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
